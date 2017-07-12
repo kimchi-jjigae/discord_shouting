@@ -23,22 +23,22 @@ boring_string = input("hej: ")
 boring_string = boring_string.lower()
 loud_string = ""
 for s in boring_string:
-    if(s.isdigit()):
+    if s.isdigit():
         plopp = digits[s]
-    elif(s.isalpha()):
+    elif s.isalpha():
         plopp = ":regional_indicator_%s: " % s
-        if(s in special_alpha):
-            if(random.random() < 0.333333333333333333333333333333333333333333333333):
+        if s in special_alpha:
+            if(random.random() < 0.333333333333333333333333333333333333333333):
                 plopp = special_alpha[s]
-    elif(s is " "):
+    elif s == " ":
         plopp = "   "
-    elif(s is "?"):
+    elif s == "?":
         plopp = ":question: "
-    elif(s is "!"):
+    elif s == "!":
         plopp = ":exclamation: "
-    elif(s is "."):
+    elif s == ".":
         plopp = ":record_button: "
-    elif(s is "-"):
+    elif s == "-":
         plopp = ":heavy_minus_sign: "
     else:
         plopp = ""
