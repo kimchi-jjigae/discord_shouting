@@ -32,6 +32,8 @@ end
 
 def screamify(char)
   case char
+  when /\s/
+    " "
   when /[abo]/
     (rand(3) == 0) ? SPECIAL_ALPHA[char] : scream(char)
   when /[0-9]/
