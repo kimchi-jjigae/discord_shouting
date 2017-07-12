@@ -18,6 +18,13 @@ special_alpha = {
     'b': ":b: ",
     'o': ":o2: ",
 }
+punctuation = {
+    ' ': "   ",
+    '?': ":question: ",
+    '!': ":exclamation: ",
+    '.': ":record_button: ",
+    '-': ":heavy_minus_sign: ",
+}
 
 boring_string = input("hej: ")
 boring_string = boring_string.lower()
@@ -30,16 +37,8 @@ for s in boring_string:
         if s in special_alpha:
             if(random.random() < 0.333333333333333333333333333333333333333333):
                 plopp = special_alpha[s]
-    elif s == " ":
-        plopp = "   "
-    elif s == "?":
-        plopp = ":question: "
-    elif s == "!":
-        plopp = ":exclamation: "
-    elif s == ".":
-        plopp = ":record_button: "
-    elif s == "-":
-        plopp = ":heavy_minus_sign: "
+    elif s in punctuation:
+        plopp = punctuation[s]
     else:
         plopp = ""
     loud_string = loud_string + plopp
