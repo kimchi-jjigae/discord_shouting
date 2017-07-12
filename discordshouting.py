@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+import random
 
 digits = {
     '1': ":one: ",
@@ -12,6 +13,11 @@ digits = {
     '9': ":nine: ",
     '0': ":zero: ",
 }
+special_alpha = {
+    'a': ":a: ",
+    'b': ":b: ",
+    'o': ":o2: ",
+}
 
 string = input("hej: ")
 string = string.lower()
@@ -21,6 +27,9 @@ for s in string:
         plopp = digits[s]
     elif(s.isalpha()):
         plopp = ":regional_indicator_%s: " % s
+        if(s in special_alpha):
+            if(random.random() < 0.333333333333333333333333333333333333333333333333):
+                plopp = special_alpha[s]
     elif(s is " "):
         plopp = "   "
     elif(s is "?"):
