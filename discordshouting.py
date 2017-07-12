@@ -19,10 +19,10 @@ special_alpha = {
     'o': ":o2: ",
 }
 
-string = input("hej: ")
-string = string.lower()
-new_string = ""
-for s in string:
+boring_string = input("hej: ")
+boring_string = boring_string.lower()
+loud_string = ""
+for s in boring_string:
     if(s.isdigit()):
         plopp = digits[s]
     elif(s.isalpha()):
@@ -42,6 +42,6 @@ for s in string:
         plopp = ":heavy_minus_sign: "
     else:
         plopp = ""
-    new_string = new_string + plopp
+    loud_string = loud_string + plopp
 
-print(new_string)
+print(loud_string)
